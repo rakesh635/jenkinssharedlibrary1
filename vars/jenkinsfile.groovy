@@ -19,7 +19,7 @@ def call(){
         stage('reading GlobalConfig & Specs'){ 
            
         }
-
+    }
         
     }   
     catch(Exception e) {
