@@ -8,14 +8,18 @@ def call(){
     Logger logger = new Logger(this, "Jenkinsfile", LogLevel.fromString(env.LOG_LEVEL))
     def specs = [:]
     try {
-    notification.initPipelineStatus()
+    script{
+      notification.initPipelineStatus()
+    }
     
     stage('Specs Checkout'){
       cleanWs()
+      script{
       ciFunc.checkoutVarFunc([
       repo: Repo,
       branch: Branch
       ])
+      }
         stage('reading GlobalConfig & Specs'){ 
             try {
             logger.info "reading the specs from Specs repository"
