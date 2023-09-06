@@ -12,10 +12,10 @@ def call(){
     script{
       notification.initPipelineStatus()
     }
+      }
     catch(Exception e) {
       logger.error "Notification error : " + e.getMessage()
     throw e
-      }
       }
     
     stage('Specs Checkout'){
