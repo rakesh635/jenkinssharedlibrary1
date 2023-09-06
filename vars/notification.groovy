@@ -37,9 +37,9 @@ def emailPipelineStatus(){
         emailext attachmentsPattern: 'LTI*.png',
         mimeType: 'text/html',
         body: html_body,
-        from: "ltipoctest@gmail.com",
+        from: "rakesh635@gmail.com",
         subject: html_subject,
-        to: "adil.pathan@lntinfotech.com"
+        to: "rakeshkumar.10675353@lntinfotech.com"
 
 
     }catch(emailEx){
