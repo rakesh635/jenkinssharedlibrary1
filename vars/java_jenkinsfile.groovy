@@ -5,7 +5,7 @@ import com.org.log.LogLevel
 import com.org.constant.GlobalVars
 
 def call(Map specs, Map config){
-  node('master') {
+  node('general') {
     Logger logger = new Logger(this, "Java-Jenkinsfile", LogLevel.fromString(env.LOG_LEVEL))
     try {
 
