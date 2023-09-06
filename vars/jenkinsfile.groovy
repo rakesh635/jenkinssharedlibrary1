@@ -9,17 +9,6 @@ def call(){
     def specs = [:]
     try {
       notification.initPipelineStatus()
-    
-    stage('Specs Checkout'){
-      cleanWs()
-      ciFunc.checkoutVarFunc([
-      repo: Repo,
-      branch: Branch
-      ])
-        stage('reading GlobalConfig & Specs'){ 
-           
-        }
-    }
         
     }   
     catch(Exception e) {
