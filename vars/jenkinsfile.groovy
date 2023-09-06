@@ -8,9 +8,15 @@ def call(){
     Logger logger = new Logger(this, "Jenkinsfile", LogLevel.fromString(env.LOG_LEVEL))
     def specs = [:]
     try {
+      try {
     script{
       notification.initPipelineStatus()
     }
+    catch(Exception e) {
+      logger.error "Notification error : " + e.getMessage()
+    throw e
+      }
+      }
     
     stage('Specs Checkout'){
       cleanWs()
