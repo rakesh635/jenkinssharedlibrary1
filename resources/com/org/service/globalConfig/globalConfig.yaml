@@ -1,0 +1,20 @@
+java:
+  build:
+    maven: 
+      command: "mvn -Dmaven.test.failure.ignore=true clean package" 
+    gradle:
+      command: "test"
+  unittest:
+    junit:
+      command: "mvn test"
+      surefire: "mvn surefire-report:report-only"
+  codecoverage:
+    jacoco:
+      command: "mvn --version"
+  codequality:
+    sonarqube:
+      url: "https://sonarcloud.io"
+      #login: "44b2720c97020fd2e46525766221bf2ac48ffe73"
+      login: "f14cf6ebc334f13dafdfe55ca113ace9ca955e48"
+      #organization: "ltipetclinic"
+      organization: "sharedlib"
