@@ -2,7 +2,6 @@ def checkoutVarFunc(Map specs) {
   println "Printing specs" + specs
   docheckout = new com.org.service.Codecheckout(this, specs)
   docheckout.checkOutFunc(specs)  
-  sh 'ls -ltrha'
 }
 def build(Map specs, Map config) {
   dobuild = new com.org.service.Build(this, specs, config)
