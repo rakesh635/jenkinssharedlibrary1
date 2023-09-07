@@ -15,7 +15,7 @@ def call(){
       /*ciFunc.checkoutVarFunc([
       repo: Repo,
       branch: Branch
-      ])/*
+      ])*/
         stage('reading GlobalConfig & Specs'){ 
             try {
             logger.info "reading the specs from Specs repository"
