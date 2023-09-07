@@ -14,7 +14,5 @@ java:
   codequality:
     sonarqube:
       url: "https://sonarcloud.io"
-      #login: "44b2720c97020fd2e46525766221bf2ac48ffe73"
-      login: "f14cf6ebc334f13dafdfe55ca113ace9ca955e48"
-      #organization: "ltipetclinic"
-      organization: "sharedlib"
+      login: "0c8d743e0116e17a888cae0d4f12e0ec19d78a9e"
+      organization: "rakesh635-github"
