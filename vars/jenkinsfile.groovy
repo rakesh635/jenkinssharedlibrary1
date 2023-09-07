@@ -9,7 +9,7 @@ def call(){
     def specs = [:]
     try {
        notification.initPipelineStatus()
-        
+       sh 'ls -ltrha' 
     }   
     catch(Exception e) {
       logger.error "Error in build stage : " + e.getMessage()
