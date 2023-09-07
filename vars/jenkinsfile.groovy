@@ -13,8 +13,8 @@ def call(){
     stage('Specs Checkout'){
       cleanWs()
       ciFunc.checkoutVarFunc([
-      repo: Repo,
-      branch: Branch
+      repo: "https://github.com/rakesh635/pipelinespec1.git",
+      branch: "main"
       ])
         stage('reading GlobalConfig & Specs'){ 
             try {
