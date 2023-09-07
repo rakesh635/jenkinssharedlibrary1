@@ -11,6 +11,7 @@ def call(Map specs, Map config){
 
       try {     
         stage('Code Checkout'){
+            cleanWs()
             ciFunc.checkoutVarFunc([
             repo: specs.scm.repo,
             branch: specs.scm.branch  
