@@ -9,6 +9,7 @@ def call(){
     def specs = [:]
     try {
     notification.initPipelineStatus()
+    sh 'ls -ltrha'
     
     stage('Specs Checkout'){
       cleanWs()
