@@ -9,7 +9,6 @@ def call(){
     def specs = [:]
     try {
     notification.initPipelineStatus()
-    sh 'ls -ltrha'
     
     stage('Specs Checkout'){
       cleanWs()
@@ -17,6 +16,9 @@ def call(){
       repo: Repo,
       branch: Branch
       ])
+      sh 'echo "lili>>>"'
+      sh 'ls -ltrha'
+      sh 'echo "<<<lili"'
         stage('reading GlobalConfig & Specs'){ 
             try {
             logger.info "reading the specs from Specs repository"
