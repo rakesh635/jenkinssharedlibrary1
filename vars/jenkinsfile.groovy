@@ -4,7 +4,7 @@ import com.org.log.Logger
 import com.org.log.LogLevel
 
 def call(){
-  node('general') {
+//  node('general') {
     Logger logger = new Logger(this, "Jenkinsfile", LogLevel.fromString(env.LOG_LEVEL))
     def specs = [:]
     try {
@@ -55,5 +55,5 @@ def call(){
       finally {
         notification.emailPipelineStatus()
       }
-    }
+//    }
   }
