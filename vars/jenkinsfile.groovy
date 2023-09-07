@@ -12,10 +12,10 @@ def call(){
     
     stage('Specs Checkout'){
       cleanWs()
-      /*ciFunc.checkoutVarFunc([
+      ciFunc.checkoutVarFunc([
       repo: Repo,
       branch: Branch
-      ])*/
+      ])
         stage('reading GlobalConfig & Specs'){ 
             try {
             logger.info "reading the specs from Specs repository"
