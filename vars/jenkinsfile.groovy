@@ -12,7 +12,10 @@ def call(){
     
     stage('Specs Checkout'){
       cleanWs()
-   
+      ciFunc.checkoutVarFunc([
+      repo: Repo,
+      branch: Branch
+      ])
         }
     }   
     catch(Exception e) {
