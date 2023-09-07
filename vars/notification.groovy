@@ -26,10 +26,15 @@ def emailPipelineStatus(){
 
         logger.info ('Preparing subject line')
 
+        script {
         sh "envsubst < 'template.txt'> 'index.html'"
+        }
 
         def String EmailSubject = "Build " + env.BUILD_NUMBER + "-" + currentBuild.currentResult + "(" + (currentBuild.fullDisplayName) + ")"
+        script
+        {
         sh "echo '${EmailSubject}' > emailsub.html" 
+        }
 
         def html_body = sh(script: "cat index.html", returnStdout: true).trim()
         html_subject = sh(script: "cat emailsub.html", returnStdout: true).trim()
