@@ -8,7 +8,7 @@ def call(){
     Logger logger = new Logger(this, "Jenkinsfile", LogLevel.fromString(env.LOG_LEVEL))
     def specs = [:]
     try {
-      notification.initPipelineStatus()
+      // notification.initPipelineStatus()
         
     }   
     catch(Exception e) {
@@ -17,7 +17,7 @@ def call(){
       }
 
       finally {
-        notification.emailPipelineStatus()
+        // notification.emailPipelineStatus()
       }
     }
   }
