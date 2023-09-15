@@ -53,7 +53,7 @@ def call(){
       }
 
       finally {
-        notification.emailPipelineStatus()
+        // notification.emailPipelineStatus()
       }
     }
   }
